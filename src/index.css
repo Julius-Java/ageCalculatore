@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+/* GENERAL STYLING */
+:root {
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-lightRed: hsl(0, 100%, 67%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-offWhite: hsl(0, 0%, 94%);
+  --neutral-lightGrey: hsl(0, 0%, 86%);
+  --neutral-smokeyGrey: hsl(0, 1%, 44%);
+  --neutral-offBlack: hsl(0, 0%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--neutral-offWhite);
+}
+
+h3 {
+  font-size: 32px;
+  font-size: 900;
+}
+
+/* SPECIFIC STYLING */
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  background-color: var(--neutral-white);
+  max-width: 500px;
+  width: 90%;
+  /* height: 200px; */
+  border-radius: 15px 15px 50px 15px;
+  padding: 1.3em 1em;
+}
+
+.formSection {
+  padding: .8em 0;
+}
+
+.labelText {
+  color: var(--neutral-smokeyGrey);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 0.3em;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-input input {
+  padding: .5em .7em;
+  font-weight: 900;
+  font-size: 20px;
+  border-radius: 7px;
+  border: 1px solid var(--neutral-lightGrey);
+}
+
+.error {
+  margin-top: 0.5em;
+  font-size: 10px;
+  color: var(--primary-lightRed);
+  font-style: italic;
+  /* display: none; */
+}
+
+/* OnError */
+.label-input input.onError {
+  border: 1px solid var(--primary-lightRed);
+}
+
+.label-input .error.onError {
+  display: block;
+}
+/* OnError */
+
+.field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field > * {
+  width: 28%;
+}
+
+.submitSection {
+  padding: 2.3em 0;
+  position: relative;
+}
+
+hr {
+  border: none;
+  border: 1px solid var(--neutral-offWhite);
+}
+
+.btn {
+  background-color: var(--primary-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid var(--primary-purple);
+  position: absolute;
+  top: 15px; /* adjust this value to move the button up or down */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn:focus, .btn:hover {
+  opacity: .75;
+}
+
+.btn img {
+  width: 30px;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.digit {
+  display: flex;
+  gap: .3rem;
+}
+
+.digit p {
+  color: var(--primary-purple);
+  font-size: 32px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
