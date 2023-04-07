@@ -49,7 +49,7 @@ const FormSection = () => {
 
     // Calculate and return the age in Years, Months, Days
     const getDob = (dob) => {
-        const {day, month, year} = dob
+        const {day, month, year} = dob;
 
         // Create a new date object from the given values
         const birthDate = new Date(year, month - 1, day)
@@ -67,7 +67,18 @@ const FormSection = () => {
             age--;
         }
 
-        console.log(age);
+        // Calculate months and days since last year birthday
+        const birthdateLastYear = new Date(now.getFullYear() - 1, month - 1, day)
+        const diffDate = new Date(now - birthdateLastYear)
+        const months = diffDate.getMonth()
+        const days = diffDate.getDate() - 1;
+
+        return {years: age, months: months, days: days}
+    }
+
+    const getAgeData = () => {
+        const ageData = getDob(dob)
+        return ageData;
     }
 
 
@@ -81,7 +92,7 @@ const FormSection = () => {
             setDob({...dob, emptyInput: true})
         } else if (!emptyForm) {
             setDob({...dob, emptyInput: false})
-            getDob(dob)
+            getAgeData(dob)
         }
     }
 
