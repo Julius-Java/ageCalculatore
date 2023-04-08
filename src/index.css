@@ -47,7 +47,7 @@ h3 {
   max-width: 400px;
   width: 90%;
   /* height: 200px; */
-  border-radius: 15px 15px 50px 15px;
+  border-radius: 15px 15px 100px 15px;
   padding: 1.3em 1em;
 }
 
@@ -77,7 +77,7 @@ h3 {
 }
 
 .label-input input::placeholder {
-  font: inherit;
+  font-family: inherit;
   font-size: 16px;
   font-weight: bold;
 }
@@ -212,6 +212,28 @@ hr {
 
   .digit p, h3 {
     font-size: 45px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .App {
+    max-width: 750px;
+  }
+
+  .labelText {
+    font-size: 16px;
+  }
+
+  .field {
+    gap: 2rem;
+  }
+
+  .digit p, h3 {
+    font-size: 60px;
+  }
+
+  .field > * {
+    width: 20%;
   }
 }
 
