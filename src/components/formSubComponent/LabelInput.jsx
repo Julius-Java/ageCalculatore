@@ -1,12 +1,17 @@
 import React from "react";
 
-const LabelInput = ({name, inputType, onChange, value, emptyInput, invalidInputMsg, placeHolder}) => {
+const LabelInput = ({name, inputType, onChange, value, emptyInput, invalidInputMsg, placeHolder, dateValidState}) => {
 
-    let requiredErrorMessage = emptyInput ? "This field is required" : invalidInputMsg;
+    let requiredErrorMessage = emptyInput ? "This field is required" : (!dateValidState ? "Invalid date" : invalidInputMsg);
 
     return (
         <div className="label-input">
-            <label htmlFor={name.toLowerCase()} className="labelText"> {name} </label>
+            <label
+                style={{color: emptyInput || !dateValidState ? "hsl(0, 100%, 67%)" : ""}}
+                htmlFor={name.toLowerCase()}
+                className="labelText">
+                    {name}
+            </label>
 
             <input
                 placeholder={placeHolder}
@@ -22,10 +27,6 @@ const LabelInput = ({name, inputType, onChange, value, emptyInput, invalidInputM
             {requiredErrorMessage && (
                 <small className="error">{requiredErrorMessage}</small>
             )}
-
-            {/* {invalidInputMsg && (
-                <small className="error">{invalidInputMsg}</small>
-            )} */}
         </div>
     )
 }

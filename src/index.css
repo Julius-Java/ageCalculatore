@@ -148,10 +148,73 @@ hr {
   gap: .3rem;
 }
 
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 .digit p {
   color: var(--primary-purple);
   font-size: 32px;
   font-weight: bolder;
   font-style: italic;
+  animation: slide-up 0.6s ease forwards;
+  /* opacity: 0; */
 }
+
+.digit-0 {
+  animation-delay: 0.2s;
+}
+
+.digit-1 {
+  animation-delay: 0.6s;
+}
+
+@media (min-width: 650px) {
+  .App {
+    max-width: 600px;
+    padding: 1.5em 1.2em;
+  }
+
+
+  .field {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+
+  .field > * {
+    width: 25%;
+  }
+
+  .label-input input{
+    font-size: 32px;
+  }
+
+  hr {
+    width: 90%;
+  }
+
+  .btn {
+    top: 6px;
+    left: 90%;
+    height: 70px;
+    width: 70px;
+  }
+
+  .btn img {
+    width: 40px;
+  }
+
+  .digit p, h3 {
+    font-size: 45px;
+  }
+}
+
+
+
 
