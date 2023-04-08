@@ -1,6 +1,6 @@
 import React from "react";
 
-const LabelInput = ({name, inputType, onChange, value, emptyInput, invalidInputMsg}) => {
+const LabelInput = ({name, inputType, onChange, value, emptyInput, invalidInputMsg, placeHolder}) => {
 
     let requiredErrorMessage = emptyInput ? "This field is required" : invalidInputMsg;
 
@@ -9,6 +9,7 @@ const LabelInput = ({name, inputType, onChange, value, emptyInput, invalidInputM
             <label htmlFor={name.toLowerCase()} className="labelText"> {name} </label>
 
             <input
+                placeholder={placeHolder}
                 autoComplete="off"
                 style={{border: emptyInput && "1px solid hsl(0, 100%, 67%)"}}
                 onChange={onChange}
