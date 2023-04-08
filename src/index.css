@@ -200,6 +200,10 @@ hr {
     font-size: 32px;
   }
 
+  .label-input input::placeholder {
+    font-size: 32px;
+  }
+
   hr {
     width: 90%;
   }
