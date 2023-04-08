@@ -89,16 +89,6 @@ h3 {
   /* display: none; */
 }
 
-/* OnError */
-.label-input input.onError {
-  border: 1px solid var(--primary-lightRed);
-}
-
-.label-input .error.onError {
-  display: block;
-}
-/* OnError */
-
 .field {
   display: flex;
   justify-content: space-between;
