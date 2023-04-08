@@ -36,7 +36,7 @@ const FormSection = ({dob, handleChange, handleSubmit, dateValidState}) => {
                         value={dob}
                         onChange={handleChange}
                         name="Day"
-                        inputType="text"
+                        inputType="number"
                         emptyInput={dob.emptyInput && dob.day === ""}
                         invalidInputMsg={validateDob(dob).day}
                         placeHolder="DD"
@@ -47,7 +47,7 @@ const FormSection = ({dob, handleChange, handleSubmit, dateValidState}) => {
                         value={dob}
                         onChange={handleChange}
                         name="Month"
-                        inputType="text"
+                        inputType="number"
                         emptyInput={dob.emptyInput && dob.month === ""}
                         invalidInputMsg={validateDob(dob).month}
                         placeHolder="MM"
@@ -58,7 +58,7 @@ const FormSection = ({dob, handleChange, handleSubmit, dateValidState}) => {
                         value={dob}
                         onChange={handleChange}
                         name="Year"
-                        inputType="text"
+                        inputType="number"
                         emptyInput={dob.emptyInput && dob.year === ""}
                         invalidInputMsg={validateDob(dob).year}
                         placeHolder="YYYY"
